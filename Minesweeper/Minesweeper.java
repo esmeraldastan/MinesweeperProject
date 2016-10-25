@@ -19,19 +19,29 @@ public class Minesweeper{
       this(10,10);
     }
    public void printSquareMinesweeper(){
-      System.out.println(">>>>>>>>>>Welcome To Minesweeper<<<<<<<<");
+      
       for (int i = 0; i < board.length; i++){
          board[i] = i + 1;
       }
     }
    public void printBoard( int row, int column){
+       System.out.println(">>>>>>>>>>Welcome To Minesweeper<<<<<<<<");
       for (int r = 0; r <row; r++){
           for (int c = 0; c< column; c++){
-              System.out.print("0");
-              
+              System.out.print("*");
+              if (row % 11 == 0){
+                  System.out.println(" ");
+             }
+             if ( column < 11 && column > 0){
+                    System.out.print(" ");
+             }
+          
             }
-          System.out.println();
-            }
-         }
-      }
+            System.out.println();
+        }
+      
+      
+            
+       }
+   }
     
