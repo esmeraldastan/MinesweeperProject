@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=void\ printSquareMinesweeper()
 comment3.params=row\ column
 comment3.target=void\ printBoard(int,\ int)
-numComments=4
+comment4.params=bombs
+comment4.target=void\ addBombs(int)
+numComments=5

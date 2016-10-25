@@ -25,10 +25,13 @@ public class Minesweeper{
       }
     }
    public void printBoard( int row, int column){
-       System.out.println(">>>>>>>>>>Welcome To Minesweeper<<<<<<<<");
+       System.out.println("     >>>>>>>>>>Welcome To Minesweeper<<<<<<<<");
+       System.out.println();
+       //number of rows and columns can be inserted 
       for (int r = 0; r <row; r++){
           for (int c = 0; c< column; c++){
               System.out.print("*");
+              //spacing
               if (row % 11 == 0){
                   System.out.println(" ");
              }
@@ -39,9 +42,9 @@ public class Minesweeper{
             }
             System.out.println();
         }
-      
-      
-            
-       }
+     }
+   public void addBombs( int bombs){
+       bombs = bombs;
    }
+}
     
