@@ -28,6 +28,7 @@ public class Minesweeper{
       for (int r = 0; r <row; r++){
           for (int c = 0; c< column; c++){
               System.out.print("0");
+              
             }
           System.out.println();
             }
