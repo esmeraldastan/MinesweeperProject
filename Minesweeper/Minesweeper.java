@@ -43,8 +43,12 @@ public class Minesweeper{
             System.out.println();
         }
      }
-   public void addBombs( int bombs){
-       bombs = bombs;
+    public void addBombs( int bombs){
+        bombs = bombs;
+       for ( bombs = -1; bombs < row; bombs++){
+            System.out.print("x");
+        
+       }
    }
 }
     
