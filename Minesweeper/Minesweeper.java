@@ -5,11 +5,13 @@
  * @author Esmeralda Lopez
  * @version 10.22.16
  */
+import java.util.Random;
 public class Minesweeper{
     //list 
     int board []; 
     int row;
     int column;
+    int bombs []; 
      public Minesweeper(int row, int column ){
        row = row;
        column = column;
@@ -44,10 +46,9 @@ public class Minesweeper{
         }
      }
     public void addBombs( int bombs){
-        bombs = bombs;
-       for ( bombs = -1; bombs < row; bombs++){
-            System.out.print("x");
-        
+       for ( bombs = -1; bombs < row*column; bombs++){
+           bombs = bombs + 1;
+           System.out.println(bombs.random[printBoard]);
        }
    }
 }
