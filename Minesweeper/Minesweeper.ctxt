@@ -7,4 +7,6 @@ comment2.params=
 comment2.target=void\ printBoard()
 comment3.params=bombs
 comment3.target=void\ addBombs(int)
-numComments=4
+comment4.params=
+comment4.target=void\ numbsAdded()
+numComments=5
