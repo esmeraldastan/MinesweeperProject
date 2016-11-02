@@ -59,23 +59,26 @@ public class Minesweeper{
     public void numbsAdded(){
         for (int i = 0; i<board.length; i++){
             if (board[i]== -1){
-                //right
-             if (i + 1 < board.length && board[i + 1] !=-1){
+            //right
+            if (i + 1 < board.length && board[i + 1] !=-1){
                     board[i + 1]++;
              }
-             //left
-             if ( i - 1 < board[0] && board[ i - 1] !=- 1){
+            //left
+            if ( i - 1 > board[0] && board[i - 1] != -1){
                    board[ i - 1]++;
              }
-             //up
-             if ( i + column < board[0] && board [ i + column ] !=-1){
-                 board[i - column]++;
+            //up
+            if ( i + column < board[0] && board [ i + column ] !=-1){
+                 board[i + column]++;
                 }
             //down
             if ( i - column > board[0] && board [ i - column] !=-1){
                 board[i - column]++;
             }
-            
+            //ehhhhh
+            if ( i - row > board[0] && board [ i - row] !=1){
+                board[ i - row]++; 
+            }
             
             
            }
