@@ -68,22 +68,33 @@ public class Minesweeper{
                    board[ i - 1]++;
              }
             //up
-            if ( i + column < board[0] && board [ i + column ] !=-1){
-                 board[i + column]++;
+            if ( i - column > board[0] && board [ i - column ] !=-1){
+                 board[i - column]++;
                 }
             //down
-            if ( i - column > board[0] && board [ i - column] !=-1){
-                board[i - column]++;
+            if ( i + column < board.length && board [ i + column] !=-1){
+                board[i +column]++;
             }
-            //ehhhhh
-            if ( i - row > board[0] && board [ i - row] !=1){
-                board[ i - row]++; 
+            //up right 
+            if ( (i - column) + 1 > board[0] && board[( i - column) + 1 ] !=-1){
+                board[( i - column)+ 1]++; 
             }
-            
-            
-           }
+            // up left 
+            if ( (i - column) - 1 > board[0] && board[( i - column) - 1 ] !=-1){
+                board[( i - column)- 1]++; 
+            }
+            //down right 
+            if ( (i + column) + 1 < board.length && board[( i + column) + 1 ] !=-1){
+                board[( i + column)+ 1]++; 
+            }
+            // down left
+             if ( (i + column) - 1 < board.length && board[( i + column) - 1 ] !=-1){
+                board[( i + column)- 1]++; 
+            }
         }
+      }
     }
+   
 }
 
     
