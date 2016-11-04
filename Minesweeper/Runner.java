@@ -7,12 +7,14 @@
  */
 public class Runner{
     public static void main(){
+        try{
         Minesweeper game = new Minesweeper();
         game.addBombs(90);
         game.numbsAdded();
         game.printBoard();
+     }catch (Expection errorName){
+        System.out.println("Error:" + errorName);
+     }
     }
- 
-   
-  }
+}
 
