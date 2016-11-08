@@ -15,8 +15,8 @@ public class Minesweeper{
     int bombs; 
     int posBombs;
     public Minesweeper(int row, int column ){
-        this.row = row;
-        this.column = column;
+        this.row = row;//horizontal
+        this.column = column;//diagonal 
         board = new int[row*column];
     }
     public Minesweeper(){
@@ -30,12 +30,13 @@ public class Minesweeper{
         System.out.println();
         //number of rows and columns can be inserted 
         for (int i= 0; i <board.length; i++){
-            //spacing
+            //spacing in board 
             if (i %column == 0){
                 System.out.println(" ");
 
             }
             if (board[i] == -1) {
+                // * represent bombs
                 System.out.print("* " );
             }
 
@@ -43,9 +44,8 @@ public class Minesweeper{
                 System.out.print(board[i] + " " ) ;
             }
         }
-
     }
-    //System.out.println();
+    // adding of bombs
     public void addBombs(int bombs){
         while (bombs > 0){
             this.bombs = bombs;
@@ -57,14 +57,15 @@ public class Minesweeper{
         }
     }
     public void numbsAdded(){
+        // location of bombs/numbers on board 
         for (int i = 0; i<board.length; i++){
             if (board[i]== -1){
             //right
-            if (i + 1 < board.length && board[i + 1] !=-1){
+            if (i + 1 < board.length && i % column < column-1 && board[i + 1] !=-1){
                     board[i + 1]++;
              }
             //left
-            if ( i - 1 > board[0] && board[i - 1] != -1){
+            if ( i - 1 > board[0] &&  i % column  !=0 && board[i - 1] != -1){
                    board[ i - 1]++;
              }
             //up
@@ -75,46 +76,37 @@ public class Minesweeper{
             if ( i + column < board.length && board [ i + column] !=-1){
                 board[i +column]++;
             }
+            
+            
             //up right 
-            if ( (i - column) + 1 > board[0] && board[( i - column) + 1 ] !=-1){
+            if ( (i - column) + 1 > board[0] && i % column < column-1 && board[( i - column) + 1 ] !=-1){
                 board[( i - column)+ 1]++; 
             }
             // up left 
-            if ( (i - column) - 1 > board[0] && board[( i - column) - 1 ] !=-1){
+            if ( (i - column) - 1 > board[0] && i % column  !=0 && board[( i - column) - 1 ] !=-1){
                 board[( i - column)- 1]++; 
             }
             //down right 
-            if ( (i + column) + 1 < board.length && board[( i + column) + 1 ] !=-1){
+            if ( (i + column) + 1 < board.length && i % column < column-1 && board[( i + column) + 1 ] !=-1){
                 board[( i + column)+ 1]++; 
             }
             // down left
-             if ( (i + column) - 1 < board.length && board[( i + column) - 1 ] !=-1){
+             if ( (i + column) - 1 < board.length && i % column  !=0 && board[( i + column) - 1 ] !=-1){
                 board[( i + column)- 1]++; 
             }
         }
       }
     }
-   public static String
+    public static String game.addBombs()( int nums) throws Exception{
+        if ( nums < 2){
+            throw new Exception(" Trying to cheat I see.... Not happening sucker!");
+        }
+        if (nums > 50 ){
+            return "Trying to kill your self?! That's great!";
+        }
+    }
+            
 }
-
-
- /**
-  * public class GR{
-    public static void main(){
-        try{
-            System.out.println(Notes.score(91));
-            System.out.println(Notes.score(81));
-            System.out.println(Notes.score(-51));
-        }catch (Exception errorName){
-            System.out.println("Error: " + errorName);
-    
-       }
-   }
-}
-
-  */  
- 
- 
  /**
   * public class Notes{
     public static String score(int percent)throws Exception{

@@ -6,17 +6,10 @@ objectbench.height=76
 objectbench.width=658
 package.editor.height=400
 package.editor.width=560
-<<<<<<< HEAD
-package.editor.x=369
-package.editor.y=67
-package.numDependencies=0
-package.numTargets=2
-=======
-package.editor.x=510
-package.editor.y=121
+package.editor.x=379
+package.editor.y=0
 package.numDependencies=1
 package.numTargets=3
->>>>>>> origin/master
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
@@ -26,31 +19,11 @@ target1.editor.x=773
 target1.editor.y=0
 target1.height=50
 target1.name=Array
-<<<<<<< HEAD
 target1.naviview.expanded=true
-=======
->>>>>>> origin/master
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
 target1.width=80
-<<<<<<< HEAD
-target1.x=180
-target1.y=10
-target2.editor.height=775
-target2.editor.width=791
-target2.editor.x=-6
-target2.editor.y=0
-target2.height=50
-target2.name=Minesweeper
-target2.naviview.expanded=true
-target2.showInterface=false
-target2.type=ClassTarget
-target2.typeParameters=
-target2.width=100
-target2.x=70
-target2.y=10
-=======
 target1.x=350
 target1.y=50
 target2.editor.height=775
@@ -79,4 +52,3 @@ target3.typeParameters=
 target3.width=100
 target3.x=70
 target3.y=10
->>>>>>> origin/master
