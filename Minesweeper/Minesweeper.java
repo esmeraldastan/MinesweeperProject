@@ -46,7 +46,13 @@ public class Minesweeper{
         }
     }
     // adding of bombs
-    public void addBombs(int bombs){
+    public void addBombs(int bombs)throws Exception{
+        if ( bombs == 1){
+            throw new Exception(" Trying to cheat I see.... Not happening sucker!");
+        }
+        else if (bombs >= 50){
+            throw new Exception( "Trying to kill your self?! That's great!");
+        }
         while (bombs > 0){
             this.bombs = bombs;
             int posBombs = (int) (Math.random()*(row*column));
@@ -97,16 +103,8 @@ public class Minesweeper{
         }
       }
     }
-    public static String game.addBombs()( int nums) throws Exception{
-        if ( nums < 2){
-            throw new Exception(" Trying to cheat I see.... Not happening sucker!");
-        }
-        if (nums > 50 ){
-            return "Trying to kill your self?! That's great!";
-        }
-    }
-            
 }
+
  /**
   * public class Notes{
     public static String score(int percent)throws Exception{

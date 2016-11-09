@@ -6,6 +6,7 @@
  * @version (a version number or a date)
  */
 public class Runner{
+    //test runner
     public static void main(){
         try {
         Minesweeper game = new Minesweeper();
@@ -17,6 +18,18 @@ public class Runner{
      
     }
   }
+  public static void main2(int bombs, int row, int column){
+    try {
+        Minesweeper game = new Minesweeper(row, column);
+        game.addBombs(bombs);
+        game.numbsAdded();
+        game.printBoard();
+    }catch (Exception errorName){
+        System.out.println();
+        System.out.println("Error: " + errorName);
+     
+    }
+   }
 }
 
 
