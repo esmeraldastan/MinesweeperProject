@@ -33,7 +33,6 @@ public class Minesweeper{
             //spacing in board 
             if (i %column == 0){
                 System.out.println(" ");
-
             }
             if (board[i] == -1) {
                 // * represent bombs
@@ -105,29 +104,3 @@ public class Minesweeper{
     }
 }
 
- /**
-  * public class Notes{
-    public static String score(int percent)throws Exception{
-        if (percent < 0 ) {     
-            throw new Exception("You apparently cannot count");
-        }
-        if (percent > 90){
-            return "A";
-        }
-        else if (percent > 80){
-            return "B";
-        }
-        else if (percent > 70){
-            return "C";
-        }
-        else if (percent > 60){
-            return "D";
-        }
-        else{
-            return "F";
-        }
-    }
-   
-}
-
-  */
