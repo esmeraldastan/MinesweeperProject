@@ -9,7 +9,7 @@
 import java.lang.Math;
 public class Minesweeper{
     //list 
-    int [] board; 
+    long [] board; 
     int row;
     int column;
     int bombs; 
@@ -17,7 +17,7 @@ public class Minesweeper{
     public Minesweeper(int row, int column ){
         this.row = row;//horizontal
         this.column = column;//diagonal 
-        board = new int[row*column];
+        board = new long[row*column];
     }
     public Minesweeper(){
         this(10,10);
