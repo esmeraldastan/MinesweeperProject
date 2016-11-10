@@ -14,9 +14,15 @@ public class MinesweeperBoard2{
     Cell[] board;
     int rows;
     int columns;
+    //added 
+    int bombs; 
+    int posBombs;
     public MinesweeperBoard2(){
         //Put the constructor here.
-        
+        this.rows = rows;//horizontal
+        this.columns = columns;//diagonal 
+        //replace int with long if change 
+        board = new Cell[rows*columns];
         
         //These pieces are for the GUI.
         JFrame frame = new JFrame();
@@ -38,7 +44,7 @@ public class MinesweeperBoard2{
         while (bombs > 0){
             this.bombs = bombs;
             // random bomb placement 
-            int posBombs = (int) (Math.random()*(row*column));
+            int posBombs = (int) (Math.random()*(rows*columns));
 
             board[posBombs] = -1;
             bombs -= 1;
@@ -52,19 +58,19 @@ public class MinesweeperBoard2{
         for (int i = 0; i<board.length; i++){
             if (board[i]== -1){
             //right
-            if (i + 1 < board.length && i % column < column-1 && board[i + 1] !=-1){
+            if (i + 1 < board.length && i % columns < columns-1 && board[i + 1] !=-1){
                     board[i + 1]++;
              }
             //left
-            if ( i - 1 > board[0] &&  i % column  !=0 && board[i - 1] != -1){
+            if ( i - 1 > board[0] &&  i % columns  !=0 && board[i - 1] != -1){
                    board[ i - 1]++;
              }
             //up
-            if ( i - column > board[0] && board [ i - column ] !=-1){
-                 board[i - column]++;
+            if ( i - columns > board[0] && board [ i - columns ] !=-1){
+                 board[i - columns]++;
                 }
             //down
-            if ( i + column < board.length && board [ i + column] !=-1){
+            if ( i + columns < board.length && board [ i + columns] !=-1){
                 board[i +column]++;
             }
             
@@ -87,10 +93,32 @@ public class MinesweeperBoard2{
         }
       }
      }
+ 
     /**This method is used for testing and will be deleted if using the GUI.
      *  It is still required for all students.
      */
     public void printBoard(){
+        //added 
+        this.row=row;
+        this.column = column; 
+
+        System.out.println("     >>>>>>>>>>Welcome To Minesweeper<<<<<<<<");
+        System.out.println();
+        //number of rows and columns can be inserted 
+        for (int i= 0; i <board.length; i++){
+            //spacing in board 
+            if (i %column == 0){
+                System.out.println(" ");
+            }
+            if (board[i] == -1) {
+                // * represent bombs
+                System.out.print("* " );
+            }
+
+            else { 
+                System.out.print(board[i] + " " ) ;
+            }
+        }
         
     }
     public JPanel addCells(){

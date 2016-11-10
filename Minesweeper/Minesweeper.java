@@ -24,6 +24,7 @@ public class Minesweeper{
     public Minesweeper(){
         this(10,10);
     }
+    //gui added 
     public void printBoard( ){
         this.row=row;
         this.column = column; 
@@ -46,7 +47,8 @@ public class Minesweeper{
             }
         }
     }
-    // adding of bombs
+    //adding of bombs
+    //gui added
     public void addBombs(int bombs)throws Exception{
         if ( bombs == 1){
             throw new Exception(" Trying to cheat I see.... Not happening sucker!");
@@ -64,6 +66,7 @@ public class Minesweeper{
 
         }
     }
+    //gui added
     public void numbsAdded(){
         // location of bombs/numbers on board 
         for (int i = 0; i<board.length; i++){
