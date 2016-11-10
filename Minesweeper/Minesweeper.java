@@ -9,7 +9,8 @@
 import java.lang.Math;
 public class Minesweeper{
     //list 
-    long [] board; 
+    //long ---> replace int *option 
+    int [] board; 
     int row;
     int column;
     int bombs; 
@@ -17,7 +18,8 @@ public class Minesweeper{
     public Minesweeper(int row, int column ){
         this.row = row;//horizontal
         this.column = column;//diagonal 
-        board = new long[row*column];
+        //replace int with long if change 
+        board = new int[row*column];
     }
     public Minesweeper(){
         this(10,10);
@@ -54,6 +56,7 @@ public class Minesweeper{
         }
         while (bombs > 0){
             this.bombs = bombs;
+            // random bomb placement 
             int posBombs = (int) (Math.random()*(row*column));
 
             board[posBombs] = -1;
