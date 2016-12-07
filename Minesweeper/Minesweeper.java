@@ -56,16 +56,21 @@ public class Minesweeper{
         else if (bombs >= 101 ){
             throw new Exception( "Trying to kill your self?! That's great!");
         }
+        
         while (bombs > 0){
             this.bombs = bombs;
             // random bomb placement 
+          
             int posBombs = (int) (Math.random()*(row*column));
-
+            if (board[posBombs]==0){
             board[posBombs] = -1;
             bombs -= 1;
 
         }
+       }
     }
+    
+    
     //gui added
     public void numbsAdded(){
         // location of bombs/numbers on board 
