@@ -1,6 +1,8 @@
 #BlueJ class context
-comment0.params=
-comment0.target=NewMinesweeper()
+comment0.params=row\ column
+comment0.target=NewMinesweeper(int,\ int)
 comment1.params=
-comment1.target=void\ printBoard2()
-numComments=2
+comment1.target=NewMinesweeper()
+comment2.params=
+comment2.target=void\ printBoard2()
+numComments=3
