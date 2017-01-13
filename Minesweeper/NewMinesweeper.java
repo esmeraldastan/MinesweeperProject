@@ -29,17 +29,38 @@ public class NewMinesweeper{
         // no use of i
         //instead row and columns 
         for (int row= 0; row<board.length; row++){
-         
-            if (row %column == 0){
+          if (row %column == 0){
                 System.out.println(" ");
-            }
-            if (board[row][row] == -1) {
+          }
+          if (board[row][row] == -1) {
                 // * represent bombs
                 System.out.print("* " );
-            }
-            else { 
+          }
+          else { 
                 System.out.print(board[row][row] + " " ) ;
-            }
+          }
+        }
+    }
+    //bomb adding
+    public void addBombs(int bombs)throws Exception{
+        if ( bombs == 1){
+            throw new Exception(" Trying to cheat I see.... Not happening sucker!");
+        }
+        else if (bombs >= 101 ){
+            throw new Exception( "Trying to kill your self?! That's great!");
+        }
+        
+         while (bombs > 0){
+          this.bombs = bombs;
+          // random bomb placement 
+          int posBombs = (int) (Math.random()*(row*column));
+          int XPos= 
+          int YPos=
+            if (board[posBombs]==0){
+            board[posBombs] = -1;
+            bombs -= 1;
+
+          }
         }
     }
        }
