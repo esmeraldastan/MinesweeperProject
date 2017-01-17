@@ -6,14 +6,15 @@
  * @version version2 1/11/17
  */
 
-
+import java.lang.Math;
 public class NewMinesweeper{
     //2D array
     int [][] board;
     int row;
     int column;
     int bombs; 
-    int posBombs;
+    int XPos;
+    int YPos;
     public NewMinesweeper(int row, int column){
         this.row = row;
         this.column = column;
@@ -24,22 +25,27 @@ public class NewMinesweeper{
     }
     public void printBoard2(){
         //title
+        this.row = row;
+        this.column = column;
         System.out.println("     >>>>>>>>>>Welcome To Minesweeper<<<<<<<<");
         System.out.println();
         // no use of i
         //instead row and columns 
-        for (int row= 0; row<board.length; row++){
-          if (row %column == 0){
-                System.out.println(" ");
-          }
-          if (board[row][row] == -1) {
+        for (row= 0; row<board.length-1; row++){
+            for (column = 0; column< board[0].length - 1 ; column++){
+          
+               
+          
+          if (board[row][column] == -1) {
                 // * represent bombs
                 System.out.print("* " );
           }
           else { 
-                System.out.print(board[row][row] + " " ) ;
+                System.out.print(board[row][column] + " " ) ;
           }
         }
+        System.out.println( " ");
+       }
     }
     //bomb adding
     public void addBombs(int bombs)throws Exception{
@@ -49,16 +55,16 @@ public class NewMinesweeper{
         else if (bombs >= 101 ){
             throw new Exception( "Trying to kill your self?! That's great!");
         }
-        
-         while (bombs > 0){
-          this.bombs = bombs;
+        int bombsplace = 0 ;
+         while (bombs < bombsplace){
+         
           // random bomb placement 
-          int posBombs = (int) (Math.random()*(row*column));
-          int XPos= 
-          int YPos=
-            if (board[posBombs]==0){
-            board[posBombs] = -1;
-            bombs -= 1;
+          //int posBombs = (int) (Math.random()*(row*column));
+          XPos=(int)(Math.random() * board.length -1);
+          YPos= (int)(Math.random() * board[0].length -1);
+            if (board[XPos][YPos]==0){
+            board[XPos][YPos] = -1;
+            bombsplace++;
 
           }
         }
