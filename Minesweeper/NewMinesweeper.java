@@ -5,7 +5,7 @@
  * @author Esmeralda Lopez
  * @version version2 1/11/17
  */
-
+//
 import java.lang.Math;
 public class NewMinesweeper{
     //2D array
