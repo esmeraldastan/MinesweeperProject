@@ -9,17 +9,10 @@ objectbench.height=76
 objectbench.width=645
 package.editor.height=327
 package.editor.width=547
-<<<<<<< HEAD
-package.editor.x=399
-package.editor.y=47
-package.numDependencies=1
-package.numTargets=3
-=======
-package.editor.x=10
-package.editor.y=67
+package.editor.x=70
+package.editor.y=70
 package.numDependencies=2
 package.numTargets=4
->>>>>>> origin/master
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
